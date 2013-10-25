@@ -29,23 +29,42 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    webworks_developer: {
-      default_options: {
+    webworks_deploy: {
+      facebook_bb10: {
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        },
+          sdk: '/Developer/WebWorksBB10',
+          file: 'build/device/facebookbb10.bar',
+          ip: '10.0.1.12',
+          password: '9999'
+        }
       },
-      custom_options: {
+      facebook_playbook: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!',
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        },
+          sdk: '/Developer/WebWorksTabletOS',
+          file: 'build/facebookplaybook.bar',
+          ip: '10.0.1.7',
+          password: '9999'
+        }
       },
+    },
+    webworks_package: {
+      options: {
+        src: [ 'facebook', 'facebook_extras' ],
+        target: 'build',
+        keypass: 'storepass',
+      },
+      facebook_bb10: {
+        options: {
+          sdk: '/Developer/WebWorksBB10',
+          name: 'facebookbb10'
+        }
+      },
+      facebook_playbook: {
+        options: {
+          sdk: '/Developer/WebWorksTabletOS',
+          name: 'facebookplaybook'
+        }
+      }
     },
 
     // Unit tests.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets"
+  rim:header="RIM-Widget:rim/widget" 
+  version="1.0.0.0" id="sedraylkoblagyoj">
+  <author href="https://github.com/jliverse">Joe Liversedge</author>
+  <name>Facebook App</name>
+  <description>A sample WebWorks configuration-only app to test the grunt-webworks-developer project.</description>
+  <icon src="icon.png" />
+  <access origin="*" uri="*" subdomains="true" />	
+  <content src="https://www.facebook.com/"/>
+  <feature id="blackberry.app">
+    <param name="orientation" value="auto" />
+  </feature>
+  <rim:permissions>
+      <rim:permit>use_camera</rim:permit>
+      <!--
+      <rim:permit>access_shared</rim:permit>	
+      <rim:permit>bbm_connect</rim:permit>
+      <rim:permit>access_pimdomain_calendars</rim:permit>
+      <rim:permit>read_device_identifying_information</rim:permit>
+      <rim:permit>read_geolocation</rim:permit>
+      <rim:permit>record_audio</rim:permit>
+      <rim:permit>run_when_backgrounded</rim:permit>
+      <rim:permit>access_location_services</rim:permit>
+      <rim:permit>access_pimdomain_messages</rim:permit>
+      <rim:permit>access_pimdomain_contacts</rim:permit>
+      <rim:permit>access_pimdomain_notebooks</rim:permit>
+      <rim:permit>post_notifications</rim:permit>
+      <rim:permit>access_sms_mms</rim:permit>
+      -->
+  </rim:permissions>    
+</widget>
